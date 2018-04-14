@@ -1,6 +1,6 @@
 {
 	"name": "lokalise-api",
-	"version": "1.0.0",
+	"version": "1.0.2",
 	"description": "Lokalise.co API client",
 	"main": "/lib/index.js",
 	"repository": "https://github.com/egorovsa/lokalise-api.git",
