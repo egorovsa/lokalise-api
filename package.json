@@ -1,11 +1,12 @@
 {
 	"name": "lokalise-api",
-	"version": "1.0.4",
+	"version": "1.0.5",
 	"description": "Lokalise.co API client",
 	"main": "./lib/index.js",
 	"repository": "https://github.com/egorovsa/lokalise-api.git",
 	"scripts": {
-		"test": "mocha ./test/test.js"
+		"test": "mocha ./test/test.js",
+		"dev": "webpack"
 	},
 	"author": "EgorovSa",
 	"license": "ISC",
