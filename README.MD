@@ -4,9 +4,9 @@ lokalise.co API client service
 ## How to install
 
 ```
-    npm install lokalise
+   $ npm install lokalise
     or
-    yarn add lokalise
+   $ yarn add lokalise
 ```
 
 ### To find out more about API params look at the Lokasize API documentation

@@ -1,25 +1,26 @@
 {
-	"name": "lokalise",
-	"version": "0.0.1",
+	"name": "lokalise-api",
+	"version": "1.0.0",
 	"description": "Lokalise.co API client",
 	"main": "/lib/index.js",
+	"repository": "https://github.com/egorovsa/lokalise-api.git",
 	"scripts": {
 		"test": "mocha ./test/test.js"
 	},
-	"author": "",
+	"author": "EgorovSa",
 	"license": "ISC",
 	"dependencies": {
-		"chai": "^4.1.2",
-		"chai-files": "^1.4.0",
-		"chai-json": "^1.0.0",
-		"chai-like": "^1.1.1",
 		"extract-zip": "^1.6.6",
-		"mocha": "^5.1.0",
 		"superagent": "^3.8.2"
 	},
 	"devDependencies": {
 		"@types/form-data": "^2.2.1",
 		"@types/superagent": "^3.5.8",
+		"chai": "^4.1.2",
+		"chai-files": "^1.4.0",
+		"chai-json": "^1.0.0",
+		"chai-like": "^1.1.1",
+		"mocha": "^5.1.0",
 		"awesome-typescript-loader": "^5.0.0",
 		"typescript": "^2.8.1",
 		"webpack": "^4.5.0",
