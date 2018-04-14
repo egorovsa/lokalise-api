@@ -50,32 +50,32 @@ lokalise.projects.add({
 
 #### Projects methods
 
- ```
- const LokaliseAPI = require('lokalise-api');
- const lokalise = new LokaliseAPI.LokaliseAPI(CONFIG.TEST_TOKEN);
+ ```typescript
+const LokaliseAPI = require('lokalise-api');
+const lokalise = new LokaliseAPI.LokaliseAPI(CONFIG.TEST_TOKEN);
 
- lokalise.projects.list(): Promise<ProjectsList>
+lokalise.projects.list(): Promise<ProjectsList>
 
- lokalise.projects.add(data: AddProjectParams): Promise<AddProjectResponse>
+lokalise.projects.add(data: AddProjectParams): Promise<AddProjectResponse>
 
- lokalise.projects.remove(id: string): Promise<DefaultResponse>
+lokalise.projects.remove(id: string): Promise<DefaultResponse>
 
- lokalise.projects.import(data: ImportData): Promise<ProjectImportResponse>
+lokalise.projects.import(data: ImportData): Promise<ProjectImportResponse>
 
- lokalise.projects.export(data: ExportProjectParams): Promise<ExportResponse>
+lokalise.projects.export(data: ExportProjectParams): Promise<ExportResponse>
 
- lokalise.projects.uploadScreenShot(data: UploadScreenshot): Promise<DefaultResponse> {
+lokalise.projects.uploadScreenShot(data: UploadScreenshot): Promise<DefaultResponse> 
 
- lokalise.projects.createSnapshot(id: string, title: string): Promise<DefaultResponse>
+lokalise.projects.createSnapshot(id: string, title: string): Promise<DefaultResponse>
 
- lokalise.projects.empty(id: string): Promise<DefaultResponse>
+lokalise.projects.empty(id: string): Promise<DefaultResponse>
 
  lokalise.projects.exportToPath(filesPath: string, data: ExportProjectParams): Promise<ExportResponse>
  ```
 
 #### Languages methods
 
- ```
+ ```typescript
 const LokaliseAPI = require('lokalise-api');
 const lokalise = new LokaliseAPI.LokaliseAPI(CONFIG.TEST_TOKEN);
 
@@ -91,7 +91,7 @@ lokalise.languages.remove(data: AddRemoveLanguagesParams): Promise<DefaultRespon
 
 #### Strings methods
 
-  ```
+  ```typescript
 const LokaliseAPI = require('lokalise-api');
 const lokalise = new LokaliseAPI.LokaliseAPI(CONFIG.TEST_TOKEN);
 
@@ -104,55 +104,46 @@ lokalise.strings.remove(params: RemoveKeysParams): Promise<DefaultResponse>
 
 #### Lokalise enum's you might use
 
-```
-LokaliseAPI.PluralFormat = {
-    generic = "generic",
-    json_string = "json_string",
-    icu = "icu",
-    array = "array",
-    i18next = "i18next",
-    symfony = "symfony",
-}
+```javascript 1.5
+LokaliseAPI.PluralFormat.generic;
+LokaliseAPI.PluralFormat.json_string;
+LokaliseAPI.PluralFormat.icu;
+LokaliseAPI.PluralFormat.i18next;
+LokaliseAPI.PluralFormat.symfony;
 
-LokaliseAPI.PlaceholderFormat = {
-    printf = "printf",
-    ios = "ios",
-    icu = "icu",
-    net = "net",
-    symfony = "symfony"
-}
+LokaliseAPI.PlaceholderFormat.printf;
+LokaliseAPI.PlaceholderFormat.ios;
+LokaliseAPI.PlaceholderFormat.icu;
+LokaliseAPI.PlaceholderFormat.net;
+LokaliseAPI.PlaceholderFormat.symfony;
 
-LokaliseAPI.FileFormat = {
-    android_sdk = "android_sdk",
-    ios_sdk = "ios_sdk",
-    xml = "xml",
-    strings = "strings",
-    csv = "csv",
-    xlsx = "xlsx",
-    po = "po",
-    properties = "properties",
-    json = "json",
-    xliff = "xliff",
-    plist = "plist",
-    resx = "resx",
-    js = "js",
-    react_native = "react_native",
-    symfony_xliff = "symfony_xliff",
-    xlf = "xlf",
-    php = "php",
-    ini = "ini",
-    ruby_yaml = "ruby_yaml",
-    yaml = "yaml",
-    stf = "stf",
-    ts = "ts"
-}
+LokaliseAPI.FileFormat.android_sdk;
+LokaliseAPI.FileFormat.ios_sdk;
+LokaliseAPI.FileFormat.xml;
+LokaliseAPI.FileFormat.strings;
+LokaliseAPI.FileFormat.csv;
+LokaliseAPI.FileFormat.xlsx;
+LokaliseAPI.FileFormat.po;
+LokaliseAPI.FileFormat.properties;
+LokaliseAPI.FileFormat.json;
+LokaliseAPI.FileFormat.xliff;
+LokaliseAPI.FileFormat.plist;
+LokaliseAPI.FileFormat.resx;
+LokaliseAPI.FileFormat.js;
+LokaliseAPI.FileFormat.react_native;
+LokaliseAPI.FileFormat.symfony_xliff;
+LokaliseAPI.FileFormat.xlf;
+LokaliseAPI.FileFormat.php;
+LokaliseAPI.FileFormat.ini;
+LokaliseAPI.FileFormat.ruby_yaml;
+LokaliseAPI.FileFormat.yaml;
+LokaliseAPI.FileFormat.stf;
+LokaliseAPI.FileFormat.ts;
 
-LokaliseAPI.PlatformBitMask = {
-    IOS = 1,
-    Android = 2,
-    Web = 4,
-    Other = 16
-}
+LokaliseAPI.PlatformBitMask.IOS;
+LokaliseAPI.PlatformBitMask.Android;
+LokaliseAPI.PlatformBitMask.Web;
+LokaliseAPI.PlatformBitMask.Other;
 
 ```
 
