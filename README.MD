@@ -17,9 +17,8 @@ https://lokalise.co/apidocs
 
 ## How to use
 
-```
+```javascript 1.8
 const LokaliseAPI = require('lokalise-api');
-
 const lokalise = new LokaliseAPI.LokaliseAPI(CONFIG.TEST_TOKEN);
 
 lokalise.projects.add({
