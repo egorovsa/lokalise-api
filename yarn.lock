@@ -2865,6 +2865,13 @@ log-update@^1.0.2:
     ansi-escapes "^1.0.0"
     cli-cursor "^1.0.2"
 
+lokalise-api@^1.0.2:
+  version "1.0.2"
+  resolved "https://registry.yarnpkg.com/lokalise-api/-/lokalise-api-1.0.2.tgz#d0c7d4244cffaddede193ab8bbd1587c59f1d8c4"
+  dependencies:
+    extract-zip "^1.6.6"
+    superagent "^3.8.2"
+
 loose-envify@^1.0.0:
   version "1.3.1"
   resolved "https://registry.yarnpkg.com/loose-envify/-/loose-envify-1.3.1.tgz#d1a8ad33fa9ce0e713d65fdd0ac8b748d478c848"

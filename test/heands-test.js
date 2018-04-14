@@ -1,4 +1,4 @@
-const LokaliseAPI = require('../lib/index.js');
+const LokaliseAPI = require('lokalise-api');
 const CONFIG = require('./tests-config');
 
 const lokalise = new LokaliseAPI.LokaliseAPI(CONFIG.TEST_TOKEN);
