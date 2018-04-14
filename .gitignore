@@ -1,8 +1,12 @@
 test/tests-config.js
-test/locale
-test/tests-config.js
+/test/tests-config.js
 ./test/tests-config.js
+
+test/locale
+/test/locale
+./test/locale
+
 ./locale
 locale
+
 node_modules
-testsLang
