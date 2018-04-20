@@ -9,4 +9,6 @@ test/locale
 ./locale
 locale
 
+.idea
+
 node_modules
