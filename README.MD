@@ -103,13 +103,16 @@ lokalise.strings.remove(params: RemoveKeysParams): Promise<DefaultResponse>
 
 #### Lokalise enum's you might use
 
-```javascript 1.5
+```javascript 1.8
+const LokaliseAPI = require('lokalise-api');
+
 LokaliseAPI.PluralFormat.generic;
 LokaliseAPI.PluralFormat.json_string;
 LokaliseAPI.PluralFormat.icu;
 LokaliseAPI.PluralFormat.i18next;
 LokaliseAPI.PluralFormat.symfony;
 
+LokaliseAPI.PlaceholderFormat.i18n;
 LokaliseAPI.PlaceholderFormat.printf;
 LokaliseAPI.PlaceholderFormat.ios;
 LokaliseAPI.PlaceholderFormat.icu;
@@ -150,13 +153,13 @@ LokaliseAPI.PlatformBitMask.Other;
 #### Project's interfaces
 
 ```typescript
-export enum ExportEmpty {
+enum ExportEmpty {
     empty = "empty",
     base = "base",
     skip = "skip"
 }
 
-export enum ExportSort {
+enum ExportSort {
     first_added = "first_added",
     last_added = "last_added",
     last_updated = "last_updated",
@@ -164,12 +167,12 @@ export enum ExportSort {
     z_a = "z_a"
 }
 
-export enum JavaPropertiesEncoding {
+enum JavaPropertiesEncoding {
     utf8 = "utf-8",
     latin1 = "latin-1"
 }
 
-export interface ProjectsListObject {
+interface ProjectsListObject {
     id: string
     name: string
     desc: string
@@ -177,25 +180,25 @@ export interface ProjectsListObject {
     owner: string
 }
 
-export interface ProjectsList {
+interface ProjectsList {
     projects: ProjectsListObject[],
     response: LokaliseResponse
 }
 
-export interface AddProjectParams {
+interface AddProjectParams {
     name: string,
     description?: string,
     base_lang?: string
 }
 
-export interface AddProjectResponse {
+interface AddProjectResponse {
     project: {
         id: number
     },
     response: LokaliseResponse
 }
 
-export interface ExportProjectParams {
+interface ExportProjectParams {
     id: number
     type: FileFormat
     langs?: string[]
@@ -222,7 +225,7 @@ export interface ExportProjectParams {
     placeholder_format?: PlaceholderFormat
 }
 
-export interface ExportResponse {
+interface ExportResponse {
     bundle: {
         file: string,
         full_file: string
@@ -230,7 +233,7 @@ export interface ExportResponse {
     response: LokaliseResponse
 }
 
-export interface ImportData {
+interface ImportData {
     id: string
     file: any
     lang_iso: string
@@ -246,7 +249,7 @@ export interface ImportData {
     replace_breaks?: 0 | 1
 }
 
-export interface ProjectImportResponse {
+interface ProjectImportResponse {
     result: {
         skipped: number,
         inserted: number,
@@ -255,7 +258,7 @@ export interface ProjectImportResponse {
     response: LokaliseResponse
 }
 
-export interface UploadScreenshot {
+interface UploadScreenshot {
     id: string,
     screenshot: string,
     autotag: 0 | 1,
@@ -266,33 +269,33 @@ export interface UploadScreenshot {
 #### Language's interfaces
 
 ```typescript
-export interface Language {
+interface Language {
     iso: string
     name: string
     rtl: string
 }
 
-export interface ProjectLanguage extends Language {
+interface ProjectLanguage extends Language {
     words: string,
     is_default: string
 }
 
-export interface SystemLanguagesResponse {
+interface SystemLanguagesResponse {
     languages: Language[],
     response: DefaultResponse
 }
 
-export interface ProjectLanguagesList {
+interface ProjectLanguagesList {
     languages: ProjectLanguage[],
     response: DefaultResponse
 }
 
-export interface AddRemoveLanguagesParams {
+interface AddRemoveLanguagesParams {
     id: string,
     iso: string[]
 }
 
-export interface SetLanguagesParams {
+interface SetLanguagesParams {
     id: string
     original_iso: string
     custom_iso?: string
@@ -303,7 +306,7 @@ export interface SetLanguagesParams {
 #### String's interfaces
 
 ```typescript
-export interface LocaleKey {
+interface LocaleKey {
     key: string
     platform_mask: PlatformBitMask
     context: string
@@ -317,19 +320,19 @@ export interface LocaleKey {
     is_archived: string
 }
 
-export interface LocaleKeyAppend extends LocaleKey {
+interface LocaleKeyAppend extends LocaleKey {
     filename_web: string,
     hidden: number,
     translations: { [locale: string]: string },
     plural: string
 }
 
-export interface StringsList {
+interface StringsList {
     strings: { [lang: string]: LocaleKey[] }
     response: LokaliseResponse
 }
 
-export interface StringsListParams {
+interface StringsListParams {
     id: string
     langs?: object[]
     platform_mask?: PlatformBitMask
@@ -340,12 +343,12 @@ export interface StringsListParams {
     placeholder_format?: PlaceholderFormat
 }
 
-export interface AddKeysParams {
+interface AddKeysParams {
     id: number,
     data: LocaleKeyAppend[]
 }
 
-export interface AddKeysResponse {
+interface AddKeysResponse {
     result: {
         inserted: string,
         updated: string
@@ -353,7 +356,7 @@ export interface AddKeysResponse {
     response: LokaliseResponse
 }
 
-export interface RemoveKeysParams {
+interface RemoveKeysParams {
     id: number,
     keys: string[]
 }

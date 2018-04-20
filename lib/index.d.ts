@@ -10,6 +10,7 @@ export declare enum PluralFormat {
     symfony = "symfony",
 }
 export declare enum PlaceholderFormat {
+    i18n = "i18n",
     printf = "printf",
     ios = "ios",
     icu = "icu",
