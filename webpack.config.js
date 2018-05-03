@@ -1,5 +1,7 @@
 const path = require('path');
+const process = require('process');
 const nodeExternals = require('webpack-node-externals');
+const production = process.env.NODE_ENV && process.env.NODE_ENV === 'production';
 
 module.exports = {
 	target: "node",
@@ -10,15 +12,13 @@ module.exports = {
 	output: {
 		filename: '[name].js',
 		path: path.resolve(__dirname, "./lib"),
-		libraryTarget: 'umd',
-		library: 'LokaliseCo',
-		umdNamedDefine: true
+		libraryTarget: 'commonjs'
 	},
-	watch: true,
+	watch: !production,
 	resolve: {
 		extensions: [".ts", ".tsx", ".js", ".json"]
 	},
-	mode: "development",
+	mode: production ? "production" : "development",
 	devtool: "source-map",
 	module: {
 		rules: [

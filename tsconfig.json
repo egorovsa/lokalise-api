@@ -12,6 +12,9 @@
 		"sourceMap": true,
 		"outDir": "lib"
 	},
+	"exclude": [
+		"node_modules"
+	],
 	"awesomeTypescriptLoaderOptions": {
 		"transpileModule": true
 	}
