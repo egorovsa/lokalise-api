@@ -1,5 +1,5 @@
-import { DefaultResponse, LokaliseResponse, Request } from "../services/request";
-import { FileFormat, PlaceholderFormat, PluralFormat } from "../index";
+import { DefaultResponse, LokaliseResponse, Request } from '../services/request';
+import { FileFormat, PlaceholderFormat, PluralFormat } from '../index';
 export declare enum ExportEmpty {
     empty = "empty",
     base = "base",
@@ -43,7 +43,7 @@ export interface ExportProjectParams {
     type: FileFormat;
     langs?: string[];
     use_original?: 0 | 1;
-    filter?: any;
+    filter?: string[];
     bundle_structure?: string;
     directory_prefix?: string;
     webhook_url?: string;
@@ -57,9 +57,9 @@ export interface ExportProjectParams {
     yaml_include_root?: 0 | 1;
     json_unescaped_slashes?: 0 | 1;
     java_properties_encoding?: JavaPropertiesEncoding;
-    java_properties_separator?: "=" | ":";
+    java_properties_separator?: '=' | ':';
     no_language_folders?: 0 | 1;
-    triggers?: any;
+    triggers?: string[];
     plural_format?: PluralFormat;
     icu_numeric?: 0 | 1;
     placeholder_format?: PlaceholderFormat;
@@ -73,7 +73,7 @@ export interface ExportResponse {
 }
 export interface ImportData {
     id: string;
-    file: any;
+    file: FileFormat;
     lang_iso: string;
     replace?: 0 | 1;
     convert_placeholders?: 0 | 1;

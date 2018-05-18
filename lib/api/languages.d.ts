@@ -1,4 +1,4 @@
-import { DefaultResponse, Request } from "../services/request";
+import { DefaultResponse, Request } from '../services/request';
 export interface Language {
     iso: string;
     name: string;

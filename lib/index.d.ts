@@ -1,6 +1,6 @@
-import { Projects } from "./api/projects";
-import { Strings } from "./api/strings";
-import { Languages } from "./api/languages";
+import { Projects } from './api/projects';
+import { Strings } from './api/strings';
+import { Languages } from './api/languages';
 export declare enum PluralFormat {
     generic = "generic",
     json_string = "json_string",

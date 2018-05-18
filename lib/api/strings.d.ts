@@ -1,5 +1,5 @@
-import { DefaultResponse, LokaliseResponse, Request } from "../services/request";
-import { PlaceholderFormat, PlatformBitMask, PluralFormat } from "../index";
+import { DefaultResponse, LokaliseResponse, Request } from '../services/request';
+import { PlaceholderFormat, PlatformBitMask, PluralFormat } from '../index';
 export interface LocaleKey {
     key: string;
     platform_mask: PlatformBitMask;
