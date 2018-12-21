@@ -365,7 +365,7 @@ interface RemoveKeysParams {
 ###  How to develop
 
 ```
-    yarn dev
+    npm run dev
 ```
 
 ###  How to test

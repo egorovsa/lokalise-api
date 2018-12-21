@@ -5,8 +5,8 @@ export interface Language {
     rtl: string;
 }
 export interface ProjectLanguage extends Language {
-    words: string;
     is_default: string;
+    words: string;
 }
 export interface SystemLanguagesResponse {
     languages: Language[];
@@ -21,16 +21,16 @@ export interface AddRemoveLanguagesParams {
     iso: string[];
 }
 export interface SetLanguagesParams {
-    id: string;
-    original_iso: string;
     custom_iso?: string;
     custom_name?: string;
+    id: string;
+    original_iso: string;
 }
 export declare class Languages extends Request {
     constructor(token: string);
-    listSystemLanguages(): Promise<SystemLanguagesResponse>;
-    list(id: string): Promise<ProjectLanguagesList>;
     add(data: AddRemoveLanguagesParams): Promise<DefaultResponse>;
-    setProperties(data: SetLanguagesParams): Promise<DefaultResponse>;
+    list(id: string): Promise<ProjectLanguagesList>;
+    listSystemLanguages(): Promise<SystemLanguagesResponse>;
     remove(data: AddRemoveLanguagesParams): Promise<DefaultResponse>;
+    setProperties(data: SetLanguagesParams): Promise<DefaultResponse>;
 }

@@ -1,7 +1,7 @@
+import { Languages } from './api/languages';
 import { Projects } from './api/projects';
 import { Strings } from './api/strings';
-import { Languages } from './api/languages';
-export declare enum PluralFormat {
+export declare const enum PluralFormat {
     generic = "generic",
     json_string = "json_string",
     icu = "icu",
@@ -9,7 +9,7 @@ export declare enum PluralFormat {
     i18next = "i18next",
     symfony = "symfony",
 }
-export declare enum PlaceholderFormat {
+export declare const enum PlaceholderFormat {
     i18n = "i18n",
     printf = "printf",
     ios = "ios",
@@ -17,7 +17,7 @@ export declare enum PlaceholderFormat {
     net = "net",
     symfony = "symfony",
 }
-export declare enum FileFormat {
+export declare const enum FileFormat {
     android_sdk = "android_sdk",
     ios_sdk = "ios_sdk",
     xml = "xml",
@@ -41,15 +41,15 @@ export declare enum FileFormat {
     stf = "stf",
     ts = "ts",
 }
-export declare enum PlatformBitMask {
+export declare const enum PlatformBitMask {
     IOS = 1,
     Android = 2,
     Web = 4,
     Other = 16,
 }
 export declare class LokaliseAPI {
+    languages: Languages;
     projects: Projects;
     strings: Strings;
-    languages: Languages;
     constructor(token: string);
 }

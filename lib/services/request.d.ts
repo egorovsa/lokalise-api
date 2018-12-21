@@ -1,7 +1,7 @@
 export interface LokaliseResponse {
-    status: string;
     code: string;
     message: string;
+    status: string;
 }
 export interface DefaultResponse {
     response: LokaliseResponse;
@@ -9,9 +9,9 @@ export interface DefaultResponse {
 export declare class Request {
     readonly token: string;
     constructor(token: string);
-    protected get<T, U>(url: string, data?: U): Promise<T>;
-    protected post<T, U>(url: string, data?: U): Promise<T>;
     protected arrayPropsToJson<T extends {
         [key: string]: any;
     }>(data: T): T;
+    protected get<T, U>(url: string, data?: U): Promise<T>;
+    protected post<T, U>(url: string, data?: U): Promise<T>;
 }

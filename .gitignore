@@ -10,5 +10,9 @@ test/locale
 locale
 
 .idea
+.idea/workspace.xml
+.idea/tasks.xml
+.idea/*.iml
 
 node_modules
+
